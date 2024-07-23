@@ -16,16 +16,26 @@ namespace FormulaAirline.API.Services
                 VirtualHost = "/"
             };
 
-            var connection = factory.CreateConnection();
-
+            using var connection = factory.CreateConnection();
             using var channel = connection.CreateModel();
 
-            channel.QueueDeclare("bookings", durable: true, exclusive: true);
+            channel.QueueDeclare(
+                queue: "bookings",
+                durable: true,
+                exclusive: false,
+                autoDelete: false,
+                arguments: null
+            );
 
             var jsonString = JsonSerializer.Serialize(message);
             var body = Encoding.UTF8.GetBytes(jsonString);
 
-            channel.BasicPublish("", "bookings", body: body);
+            channel.BasicPublish(
+                exchange: "",
+                routingKey: "bookings",
+                basicProperties: null,
+                body: body
+            );
         }
     }
 }

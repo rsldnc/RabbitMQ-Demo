@@ -22,9 +22,9 @@ namespace FormulaAirline.API.Controllers
         }
 
         [HttpPost]
-        public IActionResult CreatingBooking(Booking newBooking)
+        public IActionResult CreatingBooking([FromBody] Booking newBooking)
         {
-            if(ModelState.IsValid)
+            if(!ModelState.IsValid)
                 return BadRequest();
             
             _bookings.Add(newBooking);

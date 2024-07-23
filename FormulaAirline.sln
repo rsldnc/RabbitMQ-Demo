@@ -3,17 +3,19 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.0.31903.59
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FormulaAirline.API", "FormulaAirline.API\FormulaAirline.API.csproj", "{2A199DAE-4A83-42B3-BA1F-F394C8BFA164}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FormulaAirline.API", "FormulaAirline.API\FormulaAirline.API.csproj", "{2A199DAE-4A83-42B3-BA1F-F394C8BFA164}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FormulaAirline.TicketProcessing", "FormulaAirline.TicketProcessing\FormulaAirline.TicketProcessing.csproj", "{09150465-BEF4-48EA-9EFA-D4F5F179B227}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FormulaAirline.TicketProcessing", "FormulaAirline.TicketProcessing\FormulaAirline.TicketProcessing.csproj", "{09150465-BEF4-48EA-9EFA-D4F5F179B227}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{59E637F1-495D-46D5-A7B4-329A494C9BA5}"
+	ProjectSection(SolutionItems) = preProject
+		docker-compose.yml = docker-compose.yml
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
 		Release|Any CPU = Release|Any CPU
-	EndGlobalSection
-	GlobalSection(SolutionProperties) = preSolution
-		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{2A199DAE-4A83-42B3-BA1F-F394C8BFA164}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
@@ -24,5 +26,11 @@ Global
 		{09150465-BEF4-48EA-9EFA-D4F5F179B227}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{09150465-BEF4-48EA-9EFA-D4F5F179B227}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{09150465-BEF4-48EA-9EFA-D4F5F179B227}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {B8ECDC4E-6A04-42F5-8BB9-B62E14C4A022}
 	EndGlobalSection
 EndGlobal
