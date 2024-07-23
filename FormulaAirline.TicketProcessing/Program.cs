@@ -3,6 +3,7 @@ using RabbitMQ.Client;
 using System.Text.Json;
 using System.Text;
 using RabbitMQ.Client.Events;
+using FormulaAirline.TicketProcessing;
 
 Console.WriteLine("Welcome to the ticketing service");
 
@@ -33,7 +34,10 @@ consumer.Received += (model, eventArgs) =>
 
     var message = Encoding.UTF8.GetString(body);
 
-    Console.WriteLine(message);
+    var booking = JsonSerializer.Deserialize<Booking>(message);
+
+    Console.WriteLine($"{booking.PassportNumber} holder {booking.PassengerName} will fly");
+    Console.WriteLine($"From {booking.From} to {booking.To}");
 };
 
 channel.BasicConsume(queue: "bookings", true, consumer);
