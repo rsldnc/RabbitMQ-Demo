@@ -4,3 +4,5 @@
 
 /FormulaAirline.API/bin/Debug/net8.0
 /FormulaAirline.API/obj
+/FormulaAirline.TicketProcessing/bin/Debug/net8.0
+/FormulaAirline.TicketProcessing/obj
